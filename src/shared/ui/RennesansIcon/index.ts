@@ -1,0 +1,1 @@
+export { RennesansIcon } from "./RennesansIcon";

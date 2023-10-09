@@ -1,0 +1,1 @@
+export { RussiaBankIcon } from "./RussiaBankIcon";

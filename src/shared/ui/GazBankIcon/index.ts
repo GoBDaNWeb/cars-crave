@@ -1,0 +1,1 @@
+export { GazBankIcon } from "./GazBankIcon";

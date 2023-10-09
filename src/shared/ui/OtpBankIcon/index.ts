@@ -1,0 +1,1 @@
+export {OtpBankIcon} from './OtpBankIcon'

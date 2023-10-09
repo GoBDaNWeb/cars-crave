@@ -1,0 +1,1 @@
+export { AlfabankIcon } from "./AlfabankIcon";

@@ -1,0 +1,1 @@
+export { TinkoffBankIcon } from "./TinkoffBankIcon";

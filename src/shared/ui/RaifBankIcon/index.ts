@@ -1,0 +1,1 @@
+export { RaifBankIcon } from "./RaifBankIcon";

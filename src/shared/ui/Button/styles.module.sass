@@ -1,0 +1,15 @@
+.button.primary
+    background: var(--purple-color)
+    color: var(--white-color)
+.button.dotted
+    border: 1px dashed var(--purple-color)
+    color: var(--purple-color)
+.button
+    border-radius: var(--rounded-sm)
+    text-transform: uppercase
+    border: none
+    cursor: pointer
+    background: none
+    &:disabled
+        opacity: .5
+        pointer-events: none

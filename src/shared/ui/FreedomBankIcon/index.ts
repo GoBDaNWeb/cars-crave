@@ -1,0 +1,1 @@
+export { FreedomBankIcon } from "./FreedomBankIcon";

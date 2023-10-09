@@ -1,0 +1,1 @@
+export { CentrBankIcon } from "./CentrBankIcon";

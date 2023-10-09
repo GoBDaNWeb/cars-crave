@@ -1,0 +1,112 @@
+.brandItem
+    background: var(--white-color)
+    padding: 40px
+    display: grid
+    height: 100%
+    grid-template-columns: 30% 66%
+    gap: 60px
+    box-sizing: border-box
+    box-shadow: var(--shadow)
+    .content
+        display: flex
+        flex-direction: column
+        gap: 35px
+        .top
+            display: flex
+            align-items: center
+            gap: 30px
+            .imageWrapper
+                position: relative
+                aspect-ratio: 1
+                width: 84px
+                height: 84px
+                img
+                    object-fit: cover
+                    position: absolute
+                    top: 0
+                    left: 0
+                    bottom: 0
+                    right: 0
+        .text
+            font-size: 16px
+            font-style: normal
+            font-weight: 400
+            line-height: 150%
+        .aboutBrand
+            display: flex
+            align-items: center
+            gap: 20px
+            span
+                color: var(--purple-color)
+                leading-trim: both
+                text-edge: cap
+                font-family: Actay Wide, sans-serif
+                font-size: 13px
+                font-style: normal
+                font-weight: 700
+                line-height: 100%
+                text-transform: uppercase 
+    .swiper 
+        .swiperMain
+            height: 80%
+            .imageWrapper
+                position: relative
+                width: 100%
+                height: 100%
+                img
+                    height: 100%
+                    width: 100%
+                    top: 0
+                    left: 0
+                    bottom: 0
+                    right: 0
+                    position: absolute 
+                    object-fit: cover
+                .innerContent
+                    position: absolute
+                    bottom: 45px
+                    display: flex
+                    justify-content: space-between
+                    right: 30px
+                    left: 50px
+                    color: var(--white-color)
+                    .title
+                        color: var(--white-color)
+                    .viewBtn
+                        display: flex
+                        align-items: center
+                        gap: 20px
+                        color: var(--white-color)
+                        leading-trim: both
+                        text-edge: cap
+                        font-family: Actay Wide, sans-serif
+                        font-size: 13px
+                        font-style: normal
+                        font-weight: 700
+                        line-height: 100%
+                        text-transform: uppercase 
+                        svg
+                            path
+                                stroke: var(--white-color)
+                                fill: var(--white-color)
+                            circle
+                                stroke: var(--white-color)
+                                fill: none
+        .swiperThumbs
+            margin-top: 10px
+            .thumb
+                cursor: pointer
+                padding: 20px
+                width: 185px !important
+                height: 130px  !important
+                box-sizing: border-box
+                .imageWrapper
+                    height: 100%
+                    position: relative
+                    img
+                        top: 0
+                        bottom: 0
+                        right: 0
+                        left: 0
+                        position: absolute
+                        object-fit: cover

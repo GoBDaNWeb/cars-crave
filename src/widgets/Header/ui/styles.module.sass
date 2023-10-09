@@ -1,0 +1,120 @@
+.header
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    background: var(--white-color)
+    display: flex
+    align-items: center
+    z-index: var(--z-header)
+    box-shadow: var(--shadow)
+    .logo
+        margin: 20px 0
+        padding: 0 40px 
+        display: flex
+        flex-direction: column
+        gap: 15px
+        align-items: center
+        border-right: 1px solid var(--gray-color)
+        p
+            color: var(--purple-color)
+            text-align: center
+            leading-trim: both
+            text-edge: cap
+            font-size: 10px
+            font-style: normal
+            font-weight: 400
+            line-height: 110%
+            letter-spacing: 3.5px
+            text-transform: uppercase
+    .content
+        flex: 1
+        display: grid
+        grid-template-rows: repeat(2,1fr)
+        margin-left: 31px
+        .top
+
+            display: grid
+            grid-template-columns: 20% 80%
+            align-items: center
+            border-bottom: 1px solid var(--gray-color)
+            .searchBtn
+                display: flex
+                align-items: center
+                gap: 24px
+                font-size: 14px
+                font-style: normal
+                font-weight: 400
+                line-height: 150%
+                border-right: 1px solid var(--gray-color)
+                width: 100%
+            .info
+                padding-left: 33px
+                display: flex
+                align-items: center
+                gap: 30px
+                .address
+                    flex: 1
+                    display: flex
+                    align-items: center
+                    gap: 10px
+                    font-size: 14px
+                    font-style: normal
+                    font-weight: 400
+                    line-height: 150%
+                    white-space: nowrap
+                .clock
+                    flex: 1
+                    display: flex
+                    align-items: center
+                    gap: 10px
+                    font-size: 14px
+                    font-style: normal
+                    font-weight: 400
+                    line-height: 150%
+                    white-space: nowrap
+
+                .social
+                    flex: 1
+                    display: flex
+                    align-items: center
+                    gap: 24px
+                .phone
+                    flex: 1
+                    font-size: 15px
+                    font-style: normal
+                    font-weight: 500
+                    line-height: 120%
+                    text-transform: uppercase 
+                    white-space: nowrap
+
+                .orderBtn
+                    flex: 1
+                    color: var(--purple-color)
+                    leading-trim: both
+                    text-edge: cap
+                    font-family: Actay Wide, sans-serif
+                    font-size: 12px
+                    font-style: normal
+                    font-weight: 700
+                    line-height: 100%
+                    text-transform: uppercase 
+                    white-space: nowrap
+
+        .navigation
+            display: grid
+            grid-template-columns: repeat(6 ,1fr)
+            .link
+                padding: 22px 0
+                text-align: center
+                text-transform: uppercase
+                font-size: 14px
+                font-style: normal
+                font-weight: 500
+                line-height: 140%
+                letter-spacing: 1.4px
+                text-transform: uppercase 
+                transition: var(--trs-300)
+                &:hover
+                    background: var(--purple-color)
+                    color: var(--white-color)

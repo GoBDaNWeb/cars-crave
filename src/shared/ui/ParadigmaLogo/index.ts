@@ -1,0 +1,1 @@
+export { ParadigmaLogo } from "./ParadigmaLogo";
