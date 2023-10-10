@@ -6,6 +6,7 @@ export * from "./Selector";
 export * from "./GradientBg";
 export * from "./Checkbox";
 export * from "./Badge";
+export * from "./Range";
 
 // icons
 export * from "./LogoIcon";

@@ -1,4 +1,4 @@
-import { Badge, Button, Checkbox, Input, Selector } from "shared/ui";
+import { Badge, Button, Checkbox, Input, Selector, Range } from "shared/ui";
 import s from "./styles.module.sass";
 
 export const CreditForm = () => {
@@ -10,17 +10,19 @@ export const CreditForm = () => {
           <Checkbox id="model" />
           <span>Выбрать конкретную модель для расчета</span>
         </label>
-        <div className={s.selectors}>
+        <div className={s.mainInputs}>
           <Selector placeholder="Марка" options={[]} />
           <Selector placeholder="Модель" options={[]} />
           <Selector placeholder="Комплектация" options={[]} />
-        </div>
-        <div className={s.inputs}>
           <Input placeholder="Стоимость, руб." />
-          <Input placeholder="Взнос, руб." />
-          <Input placeholder="Срок, мес." />
-        </div>
-        <div className={s.checkboxes}>
+          <div>
+            <Input placeholder="Взнос, руб." />
+            <Range />
+          </div>
+          <div>
+            <Input placeholder="Срок, мес." />
+            <Range />
+          </div>
           <label>
             <Checkbox id="trade" />
             <span>Машина в трейд-ин</span>
@@ -30,6 +32,7 @@ export const CreditForm = () => {
             <span>Возможно что то еще</span>
           </label>
         </div>
+
         <div className={s.userData}>
           <Input placeholder="Имя" />
           <Input placeholder="+7" />
