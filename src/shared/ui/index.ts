@@ -4,6 +4,8 @@ export * from "./Title";
 export * from "./Input";
 export * from "./Selector";
 export * from "./GradientBg";
+export * from "./Checkbox";
+export * from "./Badge";
 
 // icons
 export * from "./LogoIcon";

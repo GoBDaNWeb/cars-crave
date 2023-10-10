@@ -15,11 +15,15 @@ import {
 } from "shared/ui";
 import s from "./styles.module.sass";
 import { TradeInForm } from "features/TradeInForm";
+import { CreditForm } from "features/CreditForm";
 
 export const Forms = () => {
   return (
     <div className={`${s.forms} container`}>
-      <TradeInForm />
+      <div className={s.formWrapper}>
+        <TradeInForm />
+        <CreditForm />
+      </div>
       <div className={s.programs}>
         <Title variant="h4">гибкие программы кредитования</Title>
         <p>
