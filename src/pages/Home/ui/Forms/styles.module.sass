@@ -2,13 +2,27 @@
     margin: 100px 0
     position: relative
     z-index: 3
+    .bg
+        background: url('/form-bg.png')
+        position: absolute
+        background-repeat: no-repeat
+        background-size: cover
+        height: 900px
+        top: 400px
+        left: 0
+        right: 0
+        z-index: 1
     .formWrapper
         display: flex
         flex-direction: column
         gap: 110px
+        position: relative
+        padding: 0 50px
+        z-index: 100
     .programs
         text-align: center
         margin-top: 80px
+        padding: 0 50px
         p
             max-width: 884px
             margin: 30px auto 50px
@@ -16,3 +30,6 @@
             display: grid
             grid-template-columns: repeat(6,1fr)
             gap: 25px
+            @media(max-width: 1440px)
+                grid-template-columns: repeat(4,1fr)
+                

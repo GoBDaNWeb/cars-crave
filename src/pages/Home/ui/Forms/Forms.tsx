@@ -16,10 +16,13 @@ import {
 import s from "./styles.module.sass";
 import { TradeInForm } from "features/TradeInForm";
 import { CreditForm } from "features/CreditForm";
+import Image from "next/image";
 
 export const Forms = () => {
   return (
-    <div className={`${s.forms} container`}>
+    <div className={s.forms}>
+      <div className={s.bg} />
+
       <div className={s.formWrapper}>
         <TradeInForm />
         <CreditForm />
