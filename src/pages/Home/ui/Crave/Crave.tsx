@@ -7,7 +7,7 @@ import "swiper/css/navigation";
 import "swiper/css/thumbs";
 import { Thumbs } from "swiper/modules";
 import { useState } from "react";
-import { Title } from "shared/ui";
+import { Button, PlayIcon, Title } from "shared/ui";
 import { craveImages } from "pages/Home/config";
 
 export const Crave = () => {
@@ -16,6 +16,15 @@ export const Crave = () => {
   return (
     <div className={s.crave}>
       <span className={s.title}>cars crave</span>
+      <div className={s.tour}>
+        <div className={s.imageWrapper}>
+          <Image src="/crave-bg.png" fill alt="crave" loading="lazy" />
+        </div>
+        <Button className={s.playBtn}>
+          <span>3d - тур</span>
+          <PlayIcon />
+        </Button>
+      </div>
       <Swiper
         spaceBetween={10}
         thumbs={{

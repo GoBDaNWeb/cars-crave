@@ -38,7 +38,14 @@ export const Hero = () => {
     if (inView) {
       window.addEventListener("scroll", checkScrollDirection);
       if (isBottom) {
-        brand?.scrollIntoView({ behavior: "smooth" });
+        //@ts-ignore
+        const offtes = brand?.offsetTop;
+        window.scrollTo({
+          top: offtes,
+          left: 0,
+          behavior: "smooth",
+        });
+        // brand?.scrollIntoView({ block: "center", behavior: "smooth" });
       }
     } else {
       window.removeEventListener("scroll", checkScrollDirection);

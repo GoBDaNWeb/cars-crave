@@ -3,7 +3,7 @@ import s from "./styles.module.sass";
 interface IButtonProps {
   children: ReactNode;
   className?: string;
-  variant?: "clear" | "dotted" | "primary";
+  variant?: "clear" | "dotted" | "primary" | "outline";
 }
 
 export const Button: FC<IButtonProps> = ({

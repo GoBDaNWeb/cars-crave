@@ -1,0 +1,67 @@
+// .select.error
+//     .select__control.select__control--is-focused
+//         .select__value-container 
+//             .select__placeholder
+//                 color: var(--gray-text-color)
+//     .select__control
+//         border-color: var(--error-color)
+//         background: var(--error-bg-color)
+//         .select__value-container 
+//             .select__placeholder
+//                 color: var(--gray-light-color)
+.select
+    width: 100%
+    .select__control.select__control--is-focused
+        outline: none
+        box-shadow: none
+    // .select__control.select__control--menu-is-open
+    //     border-color: var(--emerald-color)
+    //     background: var(--emerald-bg-color)
+    //     outline: none
+    //     box-shadow: none
+    //     .select__value-container 
+    //         .select__single-value
+    //             color: var(--emerald-color)
+    .select__control
+        height: 61px
+        border-radius: var(--rounded-sm)
+        transition: all var(--trs-500)
+        background: var(--gray-color)
+        border: none
+        &:hover
+            border-color: var(--emerald-color)
+        // .select__value-container.select__value-container--has-value
+        //     // margin-left: 58px
+        .select__value-container 
+            padding: 0
+            margin-left: 30px
+            .select__single-value
+                font-size: 16px
+                font-style: normal
+                font-weight: 400
+                line-height: 140%
+            .select__placeholder
+                font-size: 16px
+                font-style: normal
+                font-weight: 400
+                line-height: 140%
+                opacity: 1
+                color: var(--dark-color)
+        .select__indicators
+            position: absolute
+            left: 0
+            right: 0
+            height: 100%
+            display: flex
+            align-items: center
+            justify-content: space-between
+            left: 30px
+            right: 30px
+            .select__indicator-separator
+                opacity: 0
+            .select__clear-indicator
+                cursor: pointer
+            .select__indicator 
+                padding: 0
+
+                

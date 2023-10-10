@@ -1,6 +1,9 @@
 // ui
 export * from "./Button";
 export * from "./Title";
+export * from "./Input";
+export * from "./Selector";
+export * from "./GradientBg";
 
 // icons
 export * from "./LogoIcon";
@@ -15,6 +18,7 @@ export * from "./ParadigmaLogo";
 export * from "./YoutubeIcon";
 export * from "./InstagramIcon";
 export * from "./VkIcon";
+export * from "./VtbIcon";
 export * from "./AlfabankIcon";
 export * from "./RennesansIcon";
 export * from "./OtpBankIcon";

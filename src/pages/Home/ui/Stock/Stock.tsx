@@ -1,7 +1,7 @@
 import { carList } from "pages/Home/config";
 import s from "./styles.module.sass";
 import { CarCard } from "entities/CarCard";
-import { ArrowRight, Button, Title } from "shared/ui";
+import { ArrowRight, Button, GradientBg, Title } from "shared/ui";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 export const Stock = () => {
@@ -29,6 +29,7 @@ export const Stock = () => {
           ))}
         </Swiper>
       </div>
+      <GradientBg className={s.grad} />
     </div>
   );
 };
