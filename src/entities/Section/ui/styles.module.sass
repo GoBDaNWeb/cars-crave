@@ -1,0 +1,54 @@
+.section.left
+    .imageWrapper
+        order: 1
+    .text
+        order: 0
+.section
+    display: flex
+    justify-content: center
+    gap: 144px
+    padding-top: 100px
+    &:first-child
+        padding-top: 0
+    &:last-child
+        border-bottom: none
+    .imageWrapper
+        position: relative
+        aspect-ratio: 1
+        width: 50%
+        height: 100%
+        max-width: 635px
+        max-height: 440px
+        order: 0
+        img
+            position: absolute
+            right: 0
+            left: 0
+            bottom: 0
+            top: 0
+            object-fit: contain
+            width: 100%
+    .text
+        max-width: 645px
+        min-width: 400px
+        width: 50%
+        order: 1
+        display: flex
+        flex-direction: column
+        justify-content: center
+        .paragraphsList
+            display: flex
+            flex-direction: column
+            gap: 10px
+            margin-top: 30px
+            .boldText
+                font-family: Actay Wide, sans-serif
+                font-size: 22px
+                font-style: normal
+                font-weight: 700
+                line-height: 130%
+            p
+                font-size: 16px
+                font-style: normal
+                font-weight: 400
+                line-height: 150%

@@ -1,0 +1,1 @@
+export { PendoIcon } from "./PendoIcon";

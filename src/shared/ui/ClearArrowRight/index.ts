@@ -1,0 +1,1 @@
+export {ClearArrowRight} from './ClearArrowRight'

@@ -1,5 +1,10 @@
 html 
   box-sizing: border-box
+  scrollbar-width: thin
+  scrollbar-color: #daebf5 #ffffff
+  height: 100%
+  &::-webkit-scrollbar
+    width: 5px
 
 *,
 *::before,
@@ -12,6 +17,8 @@ body
   background: var(--gray-bg-color)
     
 .sm-container 
-    margin: 0 10px
+  margin: 0 10px
 .container 
-    padding: 0 50px
+  padding: 0 50px
+.noScroll
+  overflow: hidden

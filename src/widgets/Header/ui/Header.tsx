@@ -1,4 +1,6 @@
+import { useRouter } from "next/router";
 import Link from "next/link";
+
 import s from "./styles.module.sass";
 
 import {
@@ -13,9 +15,11 @@ import {
 import { Links } from "../config";
 
 export const Header = () => {
+  const { push } = useRouter();
+
   return (
     <header className={`${s.header} sm-container`}>
-      <div className={s.logo}>
+      <div onClick={() => push("/")} className={s.logo}>
         <LogoIcon />
         <p>
           Электромобили <br /> премиум класса

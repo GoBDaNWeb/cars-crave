@@ -2,6 +2,7 @@ import Image from "next/image";
 import s from "./styles.module.sass";
 import { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { useInView } from "react-intersection-observer";
 
 import "swiper/css";
 import "swiper/css/free-mode";
@@ -9,7 +10,6 @@ import "swiper/css/navigation";
 import "swiper/css/thumbs";
 import { Thumbs } from "swiper/modules";
 import { thumbImages } from "pages/Home/config";
-import { useInView } from "react-intersection-observer";
 
 export const Hero = () => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
@@ -39,16 +39,22 @@ export const Hero = () => {
       window.addEventListener("scroll", checkScrollDirection);
       if (isBottom) {
         //@ts-ignore
-        const offtes = brand?.offsetTop;
-        window.scrollTo({
-          top: offtes,
-          left: 0,
-          behavior: "smooth",
-        });
+        const offset = brand?.offsetTop;
+        document.body.classList.add("noScroll");
+        setTimeout(() => {
+          window.scrollTo({
+            top: offset,
+            left: 0,
+            behavior: "smooth",
+          });
+        }, 0);
         // brand?.scrollIntoView({ block: "center", behavior: "smooth" });
       }
     } else {
       window.removeEventListener("scroll", checkScrollDirection);
+      setTimeout(() => {
+        document.body.classList.remove("noScroll");
+      }, 400);
     }
   }, [inView, isBottom]);
 
@@ -64,6 +70,8 @@ export const Hero = () => {
         }}
         modules={[Thumbs]}
         className={s.swiper}
+        allowTouchMove={false}
+        grabCursor={false}
       >
         <SwiperSlide>
           <div className={s.imageWrapper}>

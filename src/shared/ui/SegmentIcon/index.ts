@@ -1,0 +1,1 @@
+export { SegmentIcon } from "./SegmentIcon";

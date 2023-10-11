@@ -1,0 +1,1 @@
+export { AfterpayIcon } from "./AfterpayIcon";

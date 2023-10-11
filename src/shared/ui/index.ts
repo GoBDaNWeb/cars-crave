@@ -7,6 +7,7 @@ export * from "./GradientBg";
 export * from "./Checkbox";
 export * from "./Badge";
 export * from "./Range";
+export * from "./Breadcrumbs";
 
 // icons
 export * from "./LogoIcon";
@@ -34,3 +35,12 @@ export * from "./TinkoffBankIcon";
 export * from "./FreedomBankIcon";
 export * from "./AvangardBankIcon";
 export * from "./PlayIcon";
+export * from "./ClearArrowRight";
+export * from "./SegmentIcon";
+export * from "./OutreachIcon";
+export * from "./GramarlyIcon";
+export * from "./AfterpayIcon";
+export * from "./OpendoorIcon";
+export * from "./AtlassianIcon";
+export * from "./GhostIcon";
+export * from "./PendoIcon";

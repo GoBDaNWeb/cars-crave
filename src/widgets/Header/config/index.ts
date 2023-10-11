@@ -1,7 +1,9 @@
+import { PATH_PAGE } from "shared/config";
+
 export const Links = [
   {
     title: "авто В наличии",
-    url: "/",
+    url: PATH_PAGE.stock,
   },
   {
     title: "Каталог авто",

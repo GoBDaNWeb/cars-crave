@@ -1,19 +1,24 @@
-import { ArrowRight, Button, Title } from "shared/ui";
-import s from "./styles.module.sass";
-import Image from "next/image";
-import { Swiper, SwiperSlide, useSwiper, useSwiperSlide } from "swiper/react";
 import { useEffect, useState } from "react";
-import { useInView } from "react-intersection-observer";
+import Image from "next/image";
+import { useRouter } from "next/router";
+import { Swiper, SwiperSlide, useSwiper, useSwiperSlide } from "swiper/react";
+
+import { Thumbs } from "swiper/modules";
+
+import s from "./styles.module.sass";
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/navigation";
 import "swiper/css/thumbs";
-import { Thumbs } from "swiper/modules";
+
+import { ArrowRight, Button, Title } from "shared/ui";
 import { thumbCarImages } from "pages/Home/config";
+
 export const BrandItem = () => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
   const swiper = useSwiper();
   const slide = useSwiperSlide();
+  const { push } = useRouter();
 
   useEffect(() => {
     if (swiper?.activeIndex === swiper.slides?.length - 1) {
@@ -39,7 +44,7 @@ export const BrandItem = () => {
           ультрасовременные электрокары, поражающие своей оснащенностью и
           энергоэффективностью. ZEEKR X 2023 года – яркое тому подтверждение.
         </p>
-        <Button className={s.aboutBrand}>
+        <Button onClick={() => push("/brand/Hongqi")} className={s.aboutBrand}>
           <ArrowRight />
           <span>Подробнее о бренде</span>
         </Button>
