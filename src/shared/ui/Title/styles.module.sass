@@ -1,3 +1,5 @@
+@import 'shared/styles/config'
+    
 .title
     font-family: Actay Wide, sans-serif
 .title.h3
@@ -5,10 +7,14 @@
     font-style: normal
     font-weight: 700
     line-height: 100%
-    text-transform: uppercase 
+    text-transform: uppercase
+    @media(max-width: $tab)
+        font-size: 30px
 .title.h4
     font-size: 35px
     font-style: normal
     font-weight: 700
     line-height: 100%
     text-transform: uppercase 
+    @media(max-width: $tab)
+        font-size: 25px

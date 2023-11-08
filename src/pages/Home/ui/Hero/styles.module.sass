@@ -1,6 +1,35 @@
+@import 'shared/styles/config'
+    
 .hero
     height: 100vh
     position: relative
+    .innerContent
+        position: absolute
+        bottom: 181px
+        left: 50px
+        z-index: 2
+        @media(max-width: $tab)
+            left: 0
+            right: 0
+            margin: auto
+            display: flex
+            justify-content: center
+        span
+            display: inline-block
+            max-width: 550px
+            color: var(--white-color)
+            leading-trim: both
+            text-edge: cap
+            font-family: Actay Wide, sans-serif
+            font-size: 55px
+            font-style: normal
+            font-weight: 700
+            line-height: 90%
+            text-transform: uppercase 
+            @media(max-width: $tab)
+                font-size: 25px
+                max-width: 300px
+                line-height: 110%
     .visible
         position: absolute
         top: 0
@@ -14,6 +43,9 @@
             position: relative
             width: 100%
             height: 100%
+            display: flex
+            justify-content: center
+            align-items: center
             img
                 position: absolute
                 top: 0
@@ -21,22 +53,7 @@
                 bottom: 0
                 right: 0
                 object-fit: cover
-            .innerContent
-                position: absolute
-                bottom: 181px
-                left: 50px
-                span
-                    display: inline-block
-                    max-width: 655px
-                    color: var(--white-color)
-                    leading-trim: both
-                    text-edge: cap
-                    font-family: Actay Wide, sans-serif
-                    font-size: 55px
-                    font-style: normal
-                    font-weight: 700
-                    line-height: 90%
-                    text-transform: uppercase 
+           
     .thumbs
         position: absolute
         bottom: 50px
@@ -44,18 +61,10 @@
         left: 50px
         height: 80px
         .imageWrapper
+            display: flex
+            align-items: center
+            justify-content: center
+        img
             cursor: pointer
-            position: relative
-            aspect-ratio: 1
-            height: 80px
-            img
-                width: 100%
-                height: 100%
-                position: absolute
-                top: 0
-                left: 0
-                bottom: 0
-                right: 0
-                object-fit: cover
            
     

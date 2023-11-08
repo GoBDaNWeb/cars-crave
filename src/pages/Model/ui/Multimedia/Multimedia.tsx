@@ -3,6 +3,7 @@ import "swiper/css";
 import s from "./styles.module.sass";
 import { multimediaList } from "pages/Model/config/multimedia";
 import Image from "next/image";
+
 export const Multimedia = () => {
   return (
     <div className={`${s.multimedia} container`}>

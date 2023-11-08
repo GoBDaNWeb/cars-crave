@@ -6,14 +6,19 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "prod": "next export",
     "lint": "next lint"
   },
   "dependencies": {
     "@pbe/react-yandex-maps": "^1.2.5",
     "compose-function": "^3.0.3",
+    "mobx": "^6.10.2",
+    "mobx-react-lite": "^4.0.5",
     "next": "13.5.4",
+    "next-image-export-optimizer": "^1.8.7",
     "next-seo": "^6.1.0",
     "normalize.css": "^8.0.1",
+    "prod": "^1.0.1",
     "react": "^18",
     "react-dom": "^18",
     "react-hook-form": "^7.47.0",
@@ -21,9 +26,11 @@
     "react-range": "^1.8.14",
     "react-select": "^5.7.7",
     "sass": "^1.69.0",
+    "sharp": "^0.32.6",
     "swiper": "^10.3.1"
   },
   "devDependencies": {
+    "@types/compose-function": "^0.0.32",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",

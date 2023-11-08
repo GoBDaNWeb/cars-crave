@@ -17,6 +17,22 @@ import s from "./styles.module.sass";
 import { TradeInForm } from "features/TradeInForm";
 import { CreditForm } from "features/CreditForm";
 import Image from "next/image";
+import { Fragment } from "react";
+
+const programs = [
+  { elem: <RennesansIcon /> },
+  { elem: <AlfabankIcon /> },
+  { elem: <VtbIcon /> },
+  { elem: <OtpBankIcon /> },
+  { elem: <RaifBankIcon /> },
+  { elem: <CentrBankIcon /> },
+  { elem: <SberBankIcon /> },
+  { elem: <RussiaBankIcon /> },
+  { elem: <GazBankIcon /> },
+  { elem: <TinkoffBankIcon /> },
+  { elem: <FreedomBankIcon /> },
+  { elem: <AvangardBankIcon /> },
+];
 
 export const Forms = () => {
   return (
@@ -35,18 +51,14 @@ export const Forms = () => {
           с тем расчетом, чтобы нагрузка на ваш бюджет была приемлемой.
         </p>
         <div className={s.programsList}>
-          <RennesansIcon />
-          <AlfabankIcon />
-          <VtbIcon />
-          <OtpBankIcon />
-          <RaifBankIcon />
-          <CentrBankIcon />
-          <SberBankIcon />
-          <RussiaBankIcon />
-          <GazBankIcon />
-          <TinkoffBankIcon />
-          <FreedomBankIcon />
-          <AvangardBankIcon />
+          {programs.map((elem, index) => (
+            <Fragment key={index}>{elem.elem}</Fragment>
+          ))}
+        </div>
+        <div className={s.programsListMob}>
+          {programs.map((elem, index) => (
+            <Fragment key={index}>{elem.elem}</Fragment>
+          ))}
         </div>
       </div>
     </div>

@@ -7,28 +7,29 @@ import {
 } from "shared/ui";
 import s from "./styles.module.sass";
 import { Map } from "entities/Map";
+
 export const Footer = () => {
   return (
     <footer className={s.footer}>
-      <div className={s.left}>
+      <div className={s.logoWrapper}>
         <LogoIcon type="light" />
-        <div className={s.content}>
-          <p className={s.copyright}>
-            © Салон Cars Crave — электромобили премиум класса.
-          </p>
-          <p className={s.policy}>Политика конфиденциальности</p>
-          <a
-            target="_blank"
-            href="https://paradigma-digital.ru/"
-            className={s.paradigma}
-          >
-            <ParadigmaLogo />
-            <span>
-              разработка сайта – <br />
-              paradigma
-            </span>
-          </a>
-        </div>
+      </div>
+      <div className={s.contentInfo}>
+        <p className={s.copyright}>
+          © Салон Cars Crave — электромобили премиум класса.
+        </p>
+        <p className={s.policy}>Политика конфиденциальности</p>
+        <a
+          target="_blank"
+          href="https://paradigma-digital.ru/"
+          className={s.paradigma}
+        >
+          <ParadigmaLogo />
+          <span>
+            разработка сайта – <br />
+            paradigma
+          </span>
+        </a>
       </div>
 
       <div className={s.center}>

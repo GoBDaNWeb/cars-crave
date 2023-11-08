@@ -11,16 +11,29 @@ import {
   ClockIcon,
   TelegramIcon,
   WhatsappIcon,
+  BurgerIcon,
 } from "shared/ui";
 import { Links } from "../config";
+import { useMenuStore } from "widgets/Menu";
+import { observer } from "mobx-react-lite";
 
-export const Header = () => {
+export const Header = observer(() => {
   const { push } = useRouter();
-
+  const menu = useMenuStore();
   return (
     <header className={`${s.header} sm-container`}>
+      <div className={s.socialMob}>
+        <a href="#" className={s.telegramIcon}>
+          <TelegramIcon />
+        </a>
+        <a href="#" className={s.whatsappIcon}>
+          <WhatsappIcon />
+        </a>
+      </div>
       <div onClick={() => push("/")} className={s.logo}>
-        <LogoIcon />
+        <div className={s.logoWrapper}>
+          <LogoIcon />
+        </div>
         <p>
           Электромобили <br /> премиум класса
         </p>
@@ -43,10 +56,10 @@ export const Header = () => {
               <span>09:00 - 21:00</span>
             </div>
             <div className={s.social}>
-              <a href="#">
+              <a href="#" className={s.telegramIcon}>
                 <TelegramIcon />
               </a>
-              <a href="#">
+              <a href="#" className={s.whatsappIcon}>
                 <WhatsappIcon />
               </a>
             </div>
@@ -58,14 +71,22 @@ export const Header = () => {
             </Button>
           </div>
         </div>
-        <nav className={s.navigation}>
-          {Links.map((link) => (
-            <Link key={link.url} href={link.url} className={s.link}>
-              {link.title}
-            </Link>
-          ))}
-        </nav>
+        <div className={s.bottom}>
+          <nav className={s.navigation}>
+            {Links.map((link) => (
+              <Link key={link.url} href={link.url} className={s.link}>
+                <span>{link.title}</span>
+              </Link>
+            ))}
+          </nav>
+          <Button variant="primary" className={s.estimationBtn}>
+            оценить свое авто
+          </Button>
+        </div>
       </div>
+      <Button onClick={() => menu.handleOpenMenu()} className={s.burger}>
+        <BurgerIcon />
+      </Button>
     </header>
   );
-};
+});

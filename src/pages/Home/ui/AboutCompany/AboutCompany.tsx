@@ -25,7 +25,7 @@ export const AboutCompany = () => {
             </p>
           </div>
           <div className={s.imageWrapper}>
-            <Image src="/car-about.png" fill alt="about" />
+            <Image src="/car-about.png" width={274} height={124} alt="about" />
           </div>
         </div>
         <div className={s.aboutItem}>
@@ -37,7 +37,7 @@ export const AboutCompany = () => {
             </p>
           </div>
           <div className={s.imageWrapper}>
-            <Image src="/car-about.png" fill alt="about" />
+            <Image src="/car-about.png" width={274} height={124} alt="about" />
           </div>
         </div>
       </div>

@@ -1,0 +1,34 @@
+.accordion.active
+    .icon
+        transform: rotate(0deg)
+.accordion 
+    display: flex
+    justify-content: space-between
+    align-items: center
+    width: 100%
+    span
+        color: var(--purple-color)
+        font-family: Actay Wide, sans-serif
+        font-size: 25px
+        font-style: normal
+        font-weight: 700
+        line-height: 100%
+        text-transform: uppercase
+    .icon
+        transform: rotate(180deg)
+        transition: var(--trs-800)
+        display: flex
+        justify-content: center
+        align-items: center
+
+.content 
+    padding: 0 18px
+    max-height: 0
+    overflow: hidden
+    transition:  var(--trs-800)
+
+.content.active 
+    max-height: 500px
+    transition: var(--trs-800)
+    padding-top: 20px
+

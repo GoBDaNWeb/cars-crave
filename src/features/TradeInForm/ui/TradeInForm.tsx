@@ -13,16 +13,12 @@ export const TradeInForm = () => {
       </div>
       <form className={s.form}>
         <div className={s.formInputs}>
-          <div className={s.formTop}>
-            <Selector placeholder="Марка" options={[]} />
-            <Selector placeholder="Модель" options={[]} />
-            <Selector placeholder="Комплектация" options={[]} />
-          </div>
-          <div className={s.formBottom}>
-            <Input placeholder="Пробег" />
-            <Input placeholder="Имя" />
-            <Input placeholder="+7" />
-          </div>
+          <Selector placeholder="Марка" options={[]} />
+          <Selector placeholder="Модель" options={[]} />
+          <Selector placeholder="Комплектация" options={[]} />
+          <Input placeholder="Пробег" />
+          <Input placeholder="Имя" />
+          <Input placeholder="+7" />
         </div>
         <p>
           Нажимая кнопку «Оценить авто» вы даёте свое согласие

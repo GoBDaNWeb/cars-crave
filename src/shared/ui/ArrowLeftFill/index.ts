@@ -1,0 +1,1 @@
+export { ArrowLeftFill } from "./ArrowLeftFill";

@@ -11,7 +11,7 @@
         text-align: center
         leading-trim: both
         text-edge: cap
-        font-family: Actay Wide, sans-serif
+        font-family: Actay, sans-serif
         font-size: 155px
         font-style: normal
         font-weight: 400
@@ -28,6 +28,9 @@
         flex-direction: column
         align-items: center
         gap: 30px
+        transition: var(--trs-500)
+        &:hover
+            background: var(--purple-hover-color)
         .imageWrapper
             width: 230px
             height: 110px
@@ -57,6 +60,7 @@
                 font-weight: 700
                 line-height: 100%
                 text-transform: uppercase 
+            
     .swiperMain
         .imageWrapper
             position: relative

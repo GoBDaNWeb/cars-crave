@@ -8,59 +8,21 @@ import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/navigation";
 import "swiper/css/thumbs";
-import { Thumbs } from "swiper/modules";
+import { Thumbs, Mousewheel, FreeMode } from "swiper/modules";
 import { thumbImages } from "pages/Home/config";
 
 export const Hero = () => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
-  const [isBottom, setBottom] = useState(false);
   const [ref, inView, entry] = useInView({
     threshold: 1,
   });
 
-  useEffect(() => {
-    const brand = document.querySelector("#brand");
-
-    let lastScrollPos = window.scrollY || document.documentElement.scrollTop;
-
-    const checkScrollDirection = () => {
-      let currentScrollPos =
-        window.scrollY || document.documentElement.scrollTop;
-
-      if (currentScrollPos > lastScrollPos) {
-        setBottom(true);
-      } else {
-        setBottom(false);
-      }
-
-      lastScrollPos = currentScrollPos;
-    };
-    if (inView) {
-      window.addEventListener("scroll", checkScrollDirection);
-      if (isBottom) {
-        //@ts-ignore
-        const offset = brand?.offsetTop;
-        document.body.classList.add("noScroll");
-        setTimeout(() => {
-          window.scrollTo({
-            top: offset,
-            left: 0,
-            behavior: "smooth",
-          });
-        }, 0);
-        // brand?.scrollIntoView({ block: "center", behavior: "smooth" });
-      }
-    } else {
-      window.removeEventListener("scroll", checkScrollDirection);
-      setTimeout(() => {
-        document.body.classList.remove("noScroll");
-      }, 400);
-    }
-  }, [inView, isBottom]);
-
   return (
     <div className={s.hero}>
       <div ref={ref} className={s.visible} />
+      <div className={s.innerContent}>
+        <span>Электромобили премиум класса</span>
+      </div>
       <Swiper
         spaceBetween={10}
         thumbs={{
@@ -76,111 +38,64 @@ export const Hero = () => {
         <SwiperSlide>
           <div className={s.imageWrapper}>
             <Image src="/hero.jpg" fill alt="hero" loading="lazy" />
-            <div className={s.innerContent}>
-              <span>
-                Электромобили премиум <br /> класса
-              </span>
-            </div>
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className={s.imageWrapper}>
             <Image src="/hero2.jpg" fill alt="hero" loading="lazy" />
-            <div className={s.innerContent}>
-              <span>
-                Электромобили премиум <br /> класса
-              </span>
-            </div>
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className={s.imageWrapper}>
             <Image src="/hero.jpg" fill alt="hero" loading="lazy" />
-            <div className={s.innerContent}>
-              <span>
-                Электромобили премиум <br /> класса
-              </span>
-            </div>
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className={s.imageWrapper}>
             <Image src="/hero2.jpg" fill alt="hero" loading="lazy" />
-            <div className={s.innerContent}>
-              <span>
-                Электромобили премиум <br /> класса
-              </span>
-            </div>
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className={s.imageWrapper}>
             <Image src="/hero.jpg" fill alt="hero" loading="lazy" />
-            <div className={s.innerContent}>
-              <span>
-                Электромобили премиум <br /> класса
-              </span>
-            </div>
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className={s.imageWrapper}>
             <Image src="/hero2.jpg" fill alt="hero" loading="lazy" />
-            <div className={s.innerContent}>
-              <span>
-                Электромобили премиум <br /> класса
-              </span>
-            </div>
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className={s.imageWrapper}>
             <Image src="/hero.jpg" fill alt="hero" loading="lazy" />
-            <div className={s.innerContent}>
-              <span>
-                Электромобили премиум <br /> класса
-              </span>
-            </div>
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className={s.imageWrapper}>
             <Image src="/hero2.jpg" fill alt="hero" loading="lazy" />
-            <div className={s.innerContent}>
-              <span>
-                Электромобили премиум <br /> класса
-              </span>
-            </div>
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className={s.imageWrapper}>
             <Image src="/hero.jpg" fill alt="hero" loading="lazy" />
-            <div className={s.innerContent}>
-              <span>
-                Электромобили премиум <br /> класса
-              </span>
-            </div>
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className={s.imageWrapper}>
             <Image src="/hero2.jpg" fill alt="hero" loading="lazy" />
-            <div className={s.innerContent}>
-              <span>
-                Электромобили премиум <br /> класса
-              </span>
-            </div>
           </div>
         </SwiperSlide>
       </Swiper>
       <Swiper
         //@ts-ignore
         onSwiper={setThumbsSwiper}
-        spaceBetween={10}
-        slidesPerView={10}
-        modules={[Thumbs]}
-        className={s.thumbs}
+        spaceBetween={50}
+        slidesPerView="auto"
+        mousewheel={true}
+        freeMode={true}
+        // centeredSlides={true}
+        modules={[FreeMode, Mousewheel, Thumbs]}
+        className={`${s.thumbs} hero-thumbs`}
       >
         {thumbImages.map((image, index) => (
           <SwiperSlide key={index}>

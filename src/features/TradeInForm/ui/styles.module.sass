@@ -1,16 +1,24 @@
+@import 'shared/styles/config'
 .tradeForm
     background: var(--white-color)
     padding: 100px 114px
     display: flex
     flex-direction: column
     align-items: center
+    @media(max-width: $desktop-sm)
+        padding: 50px
+    @media(max-width: $tab)
+        padding: 50px 20px
     .title
         font-family: Actay Wide, sans-serif
         font-size: 45px
         font-style: normal
         font-weight: 700
         line-height: 100%
-        text-transform: uppercase 
+        text-transform: uppercase
+        text-align: center
+        @media(max-width: $tab)
+            font-size: 30px
     .top
         display: flex
         flex-direction: column
@@ -29,14 +37,18 @@
         gap: 30px
         margin-bottom: 50px
         .formInputs
-            .formTop
-                display: flex
-                gap: 30px
-                margin-bottom: 30px
-            .formBottom
-                display: flex
-                gap: 30px
+            display: grid
+            grid-template-columns: repeat(3,1fr)
+            gap: 30px
+            @media(max-width: $tab)
+                grid-template-columns: repeat(2,1fr)
+                gap: 15px
+            @media(max-width: $tab-sm)
+                width: 100%
+                grid-template-columns: repeat(1,1fr)
         p
+            @media(max-width: $tab)
+                text-align: center
             a
                 color: var(--purple-color)
         .evaluateBtn
@@ -47,7 +59,9 @@
             font-style: normal
             font-weight: 700
             line-height: 140%
-            text-transform: uppercase 
+            text-transform: uppercase
+            @media(max-width: $tab-sm)
+                width: 100% 
     .bottom
         display: flex
         flex-direction: column
@@ -58,3 +72,5 @@
         .orderBtn
             height: 61px
             padding: 0 30px
+            @media(max-width: $tab-sm)
+                width: 100%

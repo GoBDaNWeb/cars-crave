@@ -6,7 +6,7 @@ export const Completates = () => {
   return (
     <div className={`${s.completates} container`}>
       <span className={s.title}>комплектации</span>
-      <CarSwiper />
+      <CarSwiper cardIsFull={false} className={s.completatesList} />
     </div>
   );
 };

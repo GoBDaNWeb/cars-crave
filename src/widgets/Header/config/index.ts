@@ -11,18 +11,14 @@ export const Links = [
   },
   {
     title: "О салоне",
-    url: "/",
+    url: PATH_PAGE.about,
   },
   {
     title: "Контакты",
-    url: "/",
+    url: PATH_PAGE.contacts,
   },
   {
     title: "Партнеры",
-    url: "/",
-  },
-  {
-    title: "оценить свое авто",
-    url: "/",
+    url: PATH_PAGE.partners,
   },
 ];

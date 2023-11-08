@@ -1,9 +1,15 @@
-import { FC, ReactNode } from "react";
+import { FC, LegacyRef, ReactNode } from "react";
 import s from "./styles.module.sass";
 interface IButtonProps {
   children: ReactNode;
   className?: string;
-  variant?: "clear" | "dotted" | "primary" | "secondary" | "outline";
+  variant?:
+    | "clear"
+    | "dotted"
+    | "primary"
+    | "secondary"
+    | "outline"
+    | "rounded";
   onClick?: () => void;
 }
 

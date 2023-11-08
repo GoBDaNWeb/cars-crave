@@ -10,6 +10,7 @@ import s from "./styles.module.sass";
 import { Thumbs } from "swiper/modules";
 import { useState } from "react";
 import { exteriors, thumbs } from "pages/Model/config";
+import { ExteriorSwiper } from "../ExteriorSwiper/ExteriorSwiper";
 
 export const Exterior = () => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
@@ -95,20 +96,8 @@ export const Exterior = () => {
             ))}
           </Swiper>
         </div>
-        <div className={s.elements}>
-          {exteriors.map((exterior) => (
-            <div key={exterior.id} className={s.element}>
-              <div className={s.imageWrapper}>
-                <Image src={exterior.img} fill alt="exterior" />
-              </div>
-              <div className={s.elementContent}>
-                <span className={s.title}>{exterior.title}</span>
-                <p>{exterior.content}</p>
-              </div>
-            </div>
-          ))}
-        </div>
       </div>
+      <ExteriorSwiper />
     </div>
   );
 };

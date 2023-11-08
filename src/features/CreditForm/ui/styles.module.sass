@@ -1,9 +1,14 @@
+@import 'shared/styles/config'
 .creditForm
     background: var(--white-color)
     padding: 100px 114px
     display: flex
     flex-direction: column
     align-items: center
+    @media(max-width: $desktop-sm)
+        padding: 50px
+    @media(max-width: $tab)
+        padding: 50px 20px
     .title
         margin-bottom: 50px
         font-family: Actay Wide, sans-serif
@@ -12,6 +17,9 @@
         font-weight: 700
         line-height: 100%
         text-transform: uppercase 
+        @media(max-width: $tab)
+            font-size: 30px
+            text-align: center
     label
         display: flex
         gap: 15px
@@ -27,16 +35,31 @@
             grid-template-columns: repeat(3,1fr)
             gap: 30px
             margin-top: 20px
+            @media(max-width: $tab)
+                grid-template-columns: repeat(2,1fr)
+                gap: 15px
+            @media(max-width: $tab)
+                grid-template-columns: repeat(2,1fr)
+            @media(max-width: $tab-sm)
+                grid-template-columns: repeat(1,1fr)
         .userData
             margin-top: 30px
             display: grid
             grid-template-columns: 66% 32%
             gap: 30px
+            @media(max-width: $tab)
+                grid-template-columns: 48% 50%
+                gap: 15px
+            @media(max-width: $tab-sm)
+                grid-template-columns: 100%
         .calc
             margin-top: 50px
             display: grid
             grid-template-columns: repeat(2,1fr)
             gap: 80px
+            @media(max-width: $tab)
+                grid-template-columns: repeat(1,1fr)
+                gap: 20px
             .calcList
                 display: flex
                 flex-direction: column
@@ -44,30 +67,40 @@
                 .calcItem
                     display: flex
                     justify-content: space-between
+                    align-items: baseline
                     .label
                         font-size: 16px
                         font-style: normal
                         font-weight: 400
                         line-height: 150%
+                        @media(max-width: $tab)
+                            font-size: 14px
                     .value
                         font-size: 20px
                         font-style: normal
                         font-weight: 700
                         line-height: 150%
+                        @media(max-width: $tab)
+                            font-size: 16px
                 .total
                     display: flex
                     justify-content: space-between
+                    align-items: baseline
                     .label
                         font-size: 16px
                         font-style: normal
                         font-weight: 400
                         line-height: 150%
+                        @media(max-width: $tab)
+                            font-size: 14px
                     .value
                         color: var(--purple-color)
                         font-size: 30px
                         font-style: normal
                         font-weight: 700
                         line-height: 150%
+                        @media(max-width: $tab)
+                            font-size: 20px
             .submit
                 display: flex
                 flex-direction: column
@@ -86,6 +119,8 @@
                     font-style: normal
                     font-weight: 400
                     line-height: 130%
+                    @media(max-width: $tab)
+                        text-align: center
                     a
                         color: var(--purple-color)
     .badgeWrapper

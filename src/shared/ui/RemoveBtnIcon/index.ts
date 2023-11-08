@@ -1,0 +1,1 @@
+export { RemoveBtnIcon } from "./RemoveBtnIcon";

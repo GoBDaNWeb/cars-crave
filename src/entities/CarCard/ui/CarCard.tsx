@@ -14,8 +14,10 @@ interface ICarCardProps {
   brand: string;
   price: string;
   title: string;
-  options: Options[];
+  options?: Options[];
+  fullOptions?: Options[];
   isFull?: boolean;
+  hideBtns?: boolean;
 }
 
 export const CarCard: FC<ICarCardProps> = ({
@@ -24,7 +26,9 @@ export const CarCard: FC<ICarCardProps> = ({
   price,
   title,
   options,
+  fullOptions,
   isFull = true,
+  hideBtns = false,
 }) => {
   const { push } = useRouter();
 
@@ -36,29 +40,60 @@ export const CarCard: FC<ICarCardProps> = ({
           <Image src={brand} width={40} height={40} alt="brand" />
           <div className={s.compare}>
             <span>Кредит от 0.01%</span>
-            {isFull ? <CompareIcon /> : null}
+            <CompareIcon />
           </div>
         </div>
       </div>
-      <div className={s.content}>
+      <div
+        className={`${s.content} ${isFull ? s.full : ""} ${
+          hideBtns ? s.hideBtns : ""
+        }`}
+      >
         <span className={s.price}>{price}</span>
         <span className={s.title}>{title}</span>
         {isFull ? (
           <div className={s.options}>
-            {options.map((option) => (
+            {options?.map((option) => (
               <div key={option.id} className={s.option}>
                 <span className={s.optionTitle}>{option.title}</span>
                 <span className={s.optionLabel}>{option.label}</span>
               </div>
             ))}
           </div>
-        ) : null}
+        ) : (
+          <div className={s.fullOptions}>
+            {fullOptions?.map((option) => (
+              <div key={option.id} className={s.option}>
+                <span className={s.optionTitle}>{option.title}</span>
+                <span className={s.optionLabel}>{option.label}</span>
+              </div>
+            ))}
+          </div>
+        )}
       </div>
-      <div className={s.btns}>
-        <Button variant="dotted" onClick={() => push("/model/Hongqi-E-HS9")}>
-          подробнее
-        </Button>
-        <Button variant="primary">заказать</Button>
+
+      <div className={`${s.btns} ${isFull ? s.full : ""}`}>
+        {isFull ? (
+          <>
+            <Button
+              variant="dotted"
+              onClick={() => push("/model/Hongqi-E-HS9")}
+            >
+              подробнее
+            </Button>
+            <Button variant="primary">заказать</Button>
+          </>
+        ) : (
+          <>
+            <Button
+              className={s.aboutBtn}
+              variant="dotted"
+              onClick={() => push("/model/Hongqi-E-HS9")}
+            >
+              подробнее
+            </Button>
+          </>
+        )}
       </div>
     </div>
   );

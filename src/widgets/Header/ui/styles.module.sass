@@ -1,3 +1,5 @@
+@import 'shared/styles/config'
+    
 .header
     position: fixed
     top: 0
@@ -8,6 +10,15 @@
     align-items: center
     z-index: var(--z-header)
     box-shadow: var(--shadow)
+    @media(max-width: $desktop-md-2)
+        justify-content: space-between
+        padding: 0 20px
+    .socialMob
+        display: none
+        @media(max-width: $desktop-md-2)
+            display: flex
+            align-items: center
+            gap: 20px
     .logo
         cursor: pointer
         margin: 20px 0
@@ -17,6 +28,12 @@
         gap: 15px
         align-items: center
         border-right: 1px solid var(--gray-color)
+        @media(max-width: $desktop-md-2)
+            border-right: none
+        .logoWrapper
+            width: 167px
+            height: 45px
+            position: relative
         p
             color: var(--purple-color)
             text-align: center
@@ -28,11 +45,15 @@
             line-height: 110%
             letter-spacing: 3.5px
             text-transform: uppercase
+            @media(max-width: $desktop-md-2)
+                display: none
     .content
         flex: 1
         display: grid
         grid-template-rows: repeat(2,1fr)
         margin-left: 31px
+        @media(max-width: $desktop-md-2)
+            display: none
         .top
 
             display: grid
@@ -80,6 +101,19 @@
                     display: flex
                     align-items: center
                     gap: 24px
+                    svg
+                        path
+                            transition: var(--trs-300)
+                    .telegramIcon
+                        &:hover
+                            svg
+                                path
+                                    fill: #0B92FF
+                    .whatsappIcon
+                        &:hover
+                            svg
+                                path
+                                    fill: #1AC673
                 .phone
                     flex: 1
                     font-size: 15px
@@ -101,21 +135,59 @@
                     line-height: 100%
                     text-transform: uppercase 
                     white-space: nowrap
-
-        .navigation
-            display: grid
-            grid-template-columns: repeat(6 ,1fr)
-            .link
-                padding: 22px 0
-                text-align: center
-                text-transform: uppercase
-                font-size: 14px
+                    text-align: left
+        .bottom
+            display: flex
+            .navigation
+                display: flex
+                justify-content: space-between
+                width: 100%
+                margin-right: 55px
+                .link
+                    padding: 22px 0
+                    text-align: center
+                    text-transform: uppercase
+                    font-size: 14px
+                    font-style: normal
+                    font-weight: 500
+                    line-height: 140%
+                    letter-spacing: 1.4px
+                    text-transform: uppercase 
+                    &:hover
+                        span
+                            color: var(--purple-color)
+                            &::after
+                                opacity: 1
+                    span
+                        transition: var(--trs-300)
+                        position: relative
+                        &::after
+                            transition: var(--trs-300)
+                            content: ''
+                            width: 100%
+                            position: absolute
+                            bottom: 0
+                            height: 2px
+                            background: var(--purple-color)
+                            left: 0
+                            bottom: -23px
+                            opacity: 0
+            .estimationBtn
+                white-space: nowrap
+                width: 238px
+                min-width: 238px
+                max-width: 238px
+                border-radius: 0px
+                font-family: Actay Wide
+                font-size: 13px
                 font-style: normal
-                font-weight: 500
-                line-height: 140%
-                letter-spacing: 1.4px
+                font-weight: 700
+                line-height: 100%
                 text-transform: uppercase 
-                transition: var(--trs-300)
-                &:hover
-                    background: var(--purple-color)
-                    color: var(--white-color)
+                display: flex
+                align-items: center
+                justify-content: center
+    .burger
+        display: none
+        @media(max-width: $desktop-md-2)
+            display: block

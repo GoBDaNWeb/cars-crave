@@ -1,0 +1,30 @@
+.mainSwiper
+    &:hover
+        .navigation
+            opacity: 1
+    .navigation
+        opacity: 0
+        display: flex
+        justify-content: space-between
+        top: 0
+        bottom: 0
+        margin: auto
+        position: absolute
+        left: 40px
+        right: 40px
+        z-index: 2
+        pointer-events: none
+        transition: var(--trs-500)
+        button
+            border-radius: var(--rounded-full)
+            pointer-events: all
+            display: flex
+            align-items: center
+            justify-content: center
+            svg
+                circle
+                    transition: var(--trs-500)
+            &:hover
+                svg
+                    circle
+                        fill: var(--purple-hover-color)

@@ -2,7 +2,7 @@ import { breadcrumbs } from "pages/Stock/config";
 
 import s from "./styles.module.sass";
 
-import { Breadcrumbs, Title } from "shared/ui";
+import { Breadcrumbs, Checkbox, Selector, SortBtn, Title } from "shared/ui";
 import { carList } from "shared/config";
 import { CarCard } from "entities/CarCard";
 
@@ -13,6 +13,32 @@ export const Stock = () => {
         <Breadcrumbs breadcrumbs={breadcrumbs} />
         <div className={s.topContent}>
           <Title variant="h3">авто в наличии</Title>
+          <div className={s.filters}>
+            <div className={s.selectors}>
+              <Selector className={s.select} placeholder="Марка" options={[]} />
+              <Selector
+                className={s.select}
+                placeholder="Модель"
+                options={[]}
+              />
+            </div>
+
+            <div className={s.checkboxes}>
+              <span className={s.checkboxesTitle}>Показать авто:</span>
+              <label>
+                <Checkbox id="trade" />
+                <span>Новый</span>
+              </label>
+              <label>
+                <Checkbox id="trade" />
+                <span>С пробегом</span>
+              </label>
+            </div>
+            <div className={s.sorted}>
+              <span>Сортировать по:</span>
+              <SortBtn>По убыванию цены</SortBtn>
+            </div>
+          </div>
         </div>
       </div>
       <div className={s.content}>
