@@ -26,31 +26,105 @@ import { PartnerItem } from "../PartnerItem/PartnerItem";
 export const PartnersList = () => {
   return (
     <div className={s.partnersList}>
-      <div className={s.rowWithText}>
-        <p>Среди наших партнёров ведущие российские банки.</p>
-        <div className={s.rows}>
-          <div className={s.row1}>
-            <PartnerItem>
-              <RennesansIcon />
-            </PartnerItem>
-            <PartnerItem>
-              <VtbIcon />
-            </PartnerItem>
-            <PartnerItem>
-              <RaifBankIcon />
-            </PartnerItem>
-          </div>
-          <div className={s.row2}>
-            <PartnerItem>
-              <TinkoffBankIcon />
-            </PartnerItem>
-            <PartnerItem>
-              <SberBankIcon />
-            </PartnerItem>
+      <div className={s.rowDesk}>
+        <div className={s.rowWithText}>
+          <p>Среди наших партнёров ведущие российские банки.</p>
+          <div className={s.rows}>
+            <div className={s.row1}>
+              <PartnerItem>
+                <RennesansIcon />
+              </PartnerItem>
+              <PartnerItem>
+                <VtbIcon />
+              </PartnerItem>
+              <PartnerItem>
+                <RaifBankIcon />
+              </PartnerItem>
+            </div>
+            <div className={s.row2}>
+              <PartnerItem>
+                <TinkoffBankIcon />
+              </PartnerItem>
+              <PartnerItem>
+                <SberBankIcon />
+              </PartnerItem>
+            </div>
           </div>
         </div>
+        <div className={s.row3}>
+          <PartnerItem>
+            <OtpBankIcon />
+          </PartnerItem>
+          <PartnerItem>
+            <AlfabankIcon />
+          </PartnerItem>
+          <PartnerItem>
+            <GazBankIcon />
+          </PartnerItem>
+        </div>
+        <div className={s.row4}>
+          <PartnerItem>
+            <CentrBankIcon />
+          </PartnerItem>
+          <PartnerItem>
+            <AvangardBankIcon />
+          </PartnerItem>
+          <PartnerItem>
+            <FreedomBankIcon />
+          </PartnerItem>
+          <PartnerItem>
+            <RussiaBankIcon />
+          </PartnerItem>
+        </div>
+        <div className={s.row5}>
+          <PartnerItem>
+            <OpendoorIcon />
+          </PartnerItem>
+          <PartnerItem>
+            <PendoIcon />
+          </PartnerItem>
+          <PartnerItem>
+            <GhostIcon />
+          </PartnerItem>
+          <div></div>
+        </div>
+        <div className={s.row6}>
+          <PartnerItem>
+            <SegmentIcon />
+          </PartnerItem>
+          <PartnerItem>
+            <OutreachIcon />
+          </PartnerItem>
+        </div>
+        <div className={s.row7}>
+          <PartnerItem>
+            <GramarlyIcon />
+          </PartnerItem>
+          <PartnerItem>
+            <AtlassianIcon />
+          </PartnerItem>
+          <PartnerItem>
+            <AfterpayIcon />
+          </PartnerItem>
+          <div></div>
+        </div>
       </div>
-      <div className={s.row3}>
+      <div className={s.rowMob}>
+        <PartnerItem>
+          <RennesansIcon />
+        </PartnerItem>
+        <PartnerItem>
+          <VtbIcon />
+        </PartnerItem>
+        <PartnerItem>
+          <RaifBankIcon />
+        </PartnerItem>
+        <PartnerItem>
+          <TinkoffBankIcon />
+        </PartnerItem>
+        <PartnerItem>
+          <SberBankIcon />
+        </PartnerItem>
         <PartnerItem>
           <OtpBankIcon />
         </PartnerItem>
@@ -60,8 +134,6 @@ export const PartnersList = () => {
         <PartnerItem>
           <GazBankIcon />
         </PartnerItem>
-      </div>
-      <div className={s.row4}>
         <PartnerItem>
           <CentrBankIcon />
         </PartnerItem>
@@ -74,8 +146,6 @@ export const PartnersList = () => {
         <PartnerItem>
           <RussiaBankIcon />
         </PartnerItem>
-      </div>
-      <div className={s.row5}>
         <PartnerItem>
           <OpendoorIcon />
         </PartnerItem>
@@ -85,17 +155,12 @@ export const PartnersList = () => {
         <PartnerItem>
           <GhostIcon />
         </PartnerItem>
-        <div></div>
-      </div>
-      <div className={s.row6}>
         <PartnerItem>
           <SegmentIcon />
         </PartnerItem>
         <PartnerItem>
           <OutreachIcon />
         </PartnerItem>
-      </div>
-      <div className={s.row7}>
         <PartnerItem>
           <GramarlyIcon />
         </PartnerItem>
@@ -105,7 +170,6 @@ export const PartnersList = () => {
         <PartnerItem>
           <AfterpayIcon />
         </PartnerItem>
-        <div></div>
       </div>
     </div>
   );

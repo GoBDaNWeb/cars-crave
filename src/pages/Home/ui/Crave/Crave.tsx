@@ -26,7 +26,7 @@ export const Crave = () => {
         </Button>
       </div>
       <Swiper
-        spaceBetween={10}
+        spaceBetween="auto"
         thumbs={{
           swiper:
             //@ts-ignore

@@ -13,6 +13,21 @@ export const About = () => {
     <div className={`${s.about} container`}>
       <div className={s.left}>
         <AboutSwiper setSwiperView={setSwiperView} />
+        <div className={s.mobInfo}>
+          <span className={s.price}>7 960 000 ₽</span>
+          <div className={s.list}>
+            {options.map((option) => (
+              <div key={option.label} className={s.option}>
+                <span className={s.optionTitle}>{option.label}</span>
+                <span className={s.optionLabel}>{option.value}</span>
+              </div>
+            ))}
+          </div>
+          <div className={s.btns}>
+            <Button variant="outline">записаться на тест-драйв</Button>
+            <Button variant="primary">Заказать обратный звонок</Button>
+          </div>
+        </div>
         <div className={s.decription}>
           <span className={s.title}>описание и характеристики</span>
           <div className={s.text}>

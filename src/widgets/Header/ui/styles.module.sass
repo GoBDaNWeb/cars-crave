@@ -30,10 +30,15 @@
         border-right: 1px solid var(--gray-color)
         @media(max-width: $desktop-md-2)
             border-right: none
+        @media(max-width: $tab-sm)
+            margin: 10px 0
         .logoWrapper
             width: 167px
             height: 45px
             position: relative
+            @media(max-width: $tab-sm)
+                width: 125px
+                height: 33px
         p
             color: var(--purple-color)
             text-align: center

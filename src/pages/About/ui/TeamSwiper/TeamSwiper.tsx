@@ -27,6 +27,17 @@ export const TeamSwiper = () => {
           //@ts-ignore
           nextEl: navNext,
         }}
+        breakpoints={{
+          0: {
+            slidesPerView: 1.2,
+          },
+          767: {
+            slidesPerView: 2.1,
+          },
+          1024: {
+            slidesPerView: 3.1,
+          },
+        }}
       >
         {team.map((person, index) => (
           <SwiperSlide key={index} className={s.aboutItem}>

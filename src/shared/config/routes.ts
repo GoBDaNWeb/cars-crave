@@ -8,4 +8,5 @@ export const PATH_PAGE = {
   about: "/about",
   comparison: "/comparison",
   equipment: "/equipment/Hongqi-E-HS9",
+  search: "/search",
 };

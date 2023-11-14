@@ -1,21 +1,33 @@
+@import 'shared/styles/config'
+    
 .stock
     padding-top: 150px
     background: var(--white-color)
+    @media(max-width: $tab-sm)
+        padding-top: 100px
     .top
         .topContent
             margin: 30px 0
             display: flex
             flex-direction: column
             gap: 50px
+            @media(max-width: $tab-sm)
+                margin: 0 0 30px
+                gap: 30px
             .filters 
                 display: flex
                 width: 100%
                 justify-content: space-between
+                @media(max-width: $desktop-md-2)
+                    flex-direction: column
+                    gap: 30px
                 .selectors 
                     display: flex
                     gap: 30px
                     .select
                         width: 250px
+                        @media(max-width: $mob)
+                            width: 150px
                 .checkboxes 
                     display: flex
                     align-items: center
@@ -43,6 +55,8 @@
                             line-height: 150%
                         &:last-child
                             margin-left: 30px
+                            @media(max-width: $mob)
+                                margin-left: 15px
                 .sorted
                     display: flex
                     align-items: center
@@ -61,3 +75,25 @@
         row-gap: 30px 
         column-gap: 80px
         grid-template-columns: repeat(4,1fr)
+        @media(max-width: 1700px) 
+            grid-template-columns: repeat(3, 1fr)
+        @media(max-width: $desktop-sm)
+            grid-template-columns: repeat(2,1fr)
+            column-gap: 40px
+        @media(max-width: $tab)
+            padding: 30px 20px 50px
+        @media(max-width: $tab-sm)
+            grid-template-columns: repeat(1,1fr)
+    .btnWrapper
+        display: flex
+        align-items: center
+        justify-content: center
+        padding-bottom: 100px
+        @media(max-width: $tab-sm)
+            padding-bottom: 70px
+        button
+            width: 426px
+            height: 65px
+            @media(max-width: $tab-sm)
+                width: 320px
+                height: 55px

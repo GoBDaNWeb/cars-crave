@@ -1,3 +1,5 @@
+@import 'shared/styles/config'
+    
 .about
     position: relative
     margin-top: 100px
@@ -15,6 +17,9 @@
             display: grid
             grid-template-columns: 55% 40%
             gap: 80px
+            @media(max-width: $tab)
+                grid-template-columns: 100%
+                gap: 30px
             .imageWrapper
                 width: 100%
                 height: 100%
@@ -25,6 +30,8 @@
             display: flex
             flex-direction: column
             gap: 30px
+            @media(max-width: $tab)
+                gap: 15px
             .title
                 color: var(--dark-color)
                 font-family: Actay Wide, sans-serif
@@ -33,6 +40,8 @@
                 font-weight: 700
                 line-height: 100% 
                 text-transform: uppercase
+                @media(max-width: $tab)
+                    font-size: 25px
             .subtitle
                 color: var(--dark-color)
                 font-family: Actay Wide, sans-serif
@@ -40,6 +49,8 @@
                 font-style: normal
                 font-weight: 700
                 line-height: 130%
+                @media(max-width: $tab)
+                    font-size: 18px
             p
                 color: var(--dark-color)
                 font-family: Onest, sans-serif
@@ -47,6 +58,8 @@
                 font-style: normal
                 font-weight: 400
                 line-height: 150%
+                @media(max-width: $tab)
+                    font-size: 14px
             .moreBtn 
                 height: 50px
                 width: 265px

@@ -40,6 +40,14 @@ export const CarSwiper: FC<ICarSwiperProps> = ({
           //@ts-ignore
           nextEl: navNext,
         }}
+        breakpoints={{
+          0: {
+            slidesPerView: 1.2,
+          },
+          767: {
+            slidesPerView: "auto",
+          },
+        }}
       >
         {carList.map((car) => (
           <SwiperSlide key={car.id}>

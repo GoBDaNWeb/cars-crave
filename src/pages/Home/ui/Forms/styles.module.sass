@@ -45,12 +45,21 @@
                 display: none
         .programsListMob
             display: none
+            overflow: hidden
+            .innerList
+                display: flex
+                animation: scroll 15s linear infinite
             @media(max-width: $tab-sm)
                 display: flex
-                overflow-x: auto
-                flex-wrap: wrap
+                flex-direction: column
                 svg
                     min-width: 201px
                     min-height: 50px
                     flex-basis: 25%
 
+@keyframes scroll 
+    from 
+        transform: translateX(0)
+    to 
+        transform: translateX(calc(-100% - 20px))
+    

@@ -10,12 +10,16 @@ export const Stock = () => {
         <Title variant="h3">В Наличии</Title>
         <Button className={s.aboutBtn}>
           <ArrowRight />
-          <span>Подробнее о бренде</span>
+          <span>Посмотреть все</span>
         </Button>
       </div>
       <div className={s.stockList}>
         <CarSwiper />
       </div>
+      <Button className={s.aboutBtnMob}>
+        <ArrowRight />
+        <span>Посмотреть все</span>
+      </Button>
       <GradientBg className={s.grad} />
     </div>
   );

@@ -1,5 +1,9 @@
+@import 'shared/styles/config'
+    
 .models
     padding-top: 100px
+    @media(max-width: $tab)
+        padding-top: 70px
     .title
         font-family: Actay Wide, sans-serif
         font-size: 35px
@@ -9,7 +13,12 @@
         text-transform: uppercase 
         margin-bottom: 30px
         display: block
+        @media(max-width: $tab)
+            font-size: 25px
     .modelsList
         display: flex
         align-items: center
         gap: 30px
+        overflow: auto
+        @media(max-width: $tab)
+            padding-bottom: 20px

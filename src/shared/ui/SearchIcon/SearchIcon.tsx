@@ -18,7 +18,7 @@ export const SearchIcon = () => {
       <path
         d="M16.1 17.7949L19.9667 22.2813"
         stroke="#7434A4"
-        stroke-linecap="square"
+        strokeLinecap="square"
       />
     </svg>
   );

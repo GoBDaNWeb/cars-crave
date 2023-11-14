@@ -14,7 +14,22 @@ export const Multimedia = () => {
           которой происходит быстрее и плавнее.
         </p>
       </div>
-      <Swiper slidesPerView="auto" spaceBetween={30} className="autoSwiper">
+      <Swiper
+        slidesPerView="auto"
+        spaceBetween={30}
+        className="autoSwiper"
+        breakpoints={{
+          0: {
+            slidesPerView: 1.2,
+          },
+          767: {
+            slidesPerView: 2.2,
+          },
+          1024: {
+            slidesPerView: 3.2,
+          },
+        }}
+      >
         {multimediaList.map((multimedia) => (
           <SwiperSlide key={multimedia.id} className={s.multimediaItem}>
             <div className={s.imageWrapper}>

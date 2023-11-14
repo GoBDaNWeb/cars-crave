@@ -1,10 +1,18 @@
+@import 'shared/styles/config'
+    
 .exterior
     margin-top: 100px
     padding-bottom: 100px
+    @media(max-width: $tab)
+        margin-top: 200px
     .top
         display: flex
         justify-content: space-between
         margin-bottom: 50px
+        gap: 30px
+        @media(max-width: $tab)
+            flex-direction: column
+            margin-bottom: 30px
         .title
             font-family: Actay Wide, sans-serif
             font-size: 35px
@@ -12,6 +20,8 @@
             font-weight: 700
             line-height: 100%
             text-transform: uppercase 
+            @media(max-width: $tab)
+                font-size: 25px
         p
             max-width: 655px
             font-family: Actay Wide, sans-serif
@@ -19,11 +29,33 @@
             font-style: normal
             font-weight: 700
             line-height: 130%
+            @media(max-width: $tab)
+                font-size: 18px
     .content
         .swiper
             position: relative
             .mainSwiper
                 height: 80vh
+                @media(max-width: $tab)
+                    height: 60vh
+                @media(max-width: $tab-sm)
+                    height: 30vh
+                span
+                    color: var(--white-color)
+                    z-index: 1
+                    font-family: Actay Wide, sans-serif
+                    font-size: 25px
+                    font-style: normal
+                    font-weight: 700
+                    line-height: 100%
+                    text-transform: uppercase
+                    position: absolute
+                    bottom: 50px
+                    left: 50px
+                    @media(max-width: $tab)
+                        bottom: 20px
+                        left: 20px
+                        font-size: 20px
                 .imageWrapper
                     position: relative
                     width: 100%
@@ -35,16 +67,42 @@
                         bottom: 0
                         right: 0
                         object-fit: cover
-            .thumbs
+            .thumSwiperWrapper
                 position: absolute
                 right: 50px
                 bottom: 50px
                 display: flex
                 justify-content: flex-start
-                .thumb
-                    cursor: pointer
-                    width: 50px !important
-                    height: 50px !important
+                gap: 20px
+                @media(max-width: $tab)
+                    bottom: -50px
+                    left: 0
+                    align-items: center
+                span
+                    color: var(--white-color)
+                    font-family: Actay Wide, sans-serif
+                    font-size: 16px
+                    font-style: normal
+                    font-weight: 700
+                    line-height: 110% 
+                    text-transform: uppercase 
+                    z-index: 1
+                    max-width: 100px
+                    @media(max-width: $tab)
+                        color: var(--dark-color)
+                        max-width: 120px
+                        font-size: 14px
+                .thumbs
+                    @media(max-width: $tab)
+                        margin: 0
+                    .thumb
+                        cursor: pointer
+                        width: 50px !important
+                        height: 50px !important
+                        @media(max-width: $tab)
+                            border: 1px solid var(--gray-color)
+                            width: 30px !important
+                            height: 30px !important
         .elements  
             display: grid
             grid-template-columns: repeat(2, 1fr)

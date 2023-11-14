@@ -52,10 +52,10 @@ export const SberBankIcon = () => {
           y2="24.1661"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0.14" stop-color="#F1E813" />
-          <stop offset="0.3" stop-color="#E6E418" />
-          <stop offset="0.58" stop-color="#C9DA26" />
-          <stop offset="0.89" stop-color="#A2CC39" />
+          <stop offset="0.14" stopColor="#F1E813" />
+          <stop offset="0.3" stopColor="#E6E418" />
+          <stop offset="0.58" stopColor="#C9DA26" />
+          <stop offset="0.89" stopColor="#A2CC39" />
         </linearGradient>
         <linearGradient
           id="paint1_linear_179_623"
@@ -65,9 +65,9 @@ export const SberBankIcon = () => {
           y2="12.2711"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0.06" stop-color="#0FA7DF" />
-          <stop offset="0.54" stop-color="#0098F8" />
-          <stop offset="0.92" stop-color="#0290EA" />
+          <stop offset="0.06" stopColor="#0FA7DF" />
+          <stop offset="0.54" stopColor="#0098F8" />
+          <stop offset="0.92" stopColor="#0290EA" />
         </linearGradient>
         <linearGradient
           id="paint2_linear_179_623"
@@ -77,9 +77,9 @@ export const SberBankIcon = () => {
           y2="34.5263"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0.12" stop-color="#A2CC39" />
-          <stop offset="0.28" stop-color="#86C239" />
-          <stop offset="0.87" stop-color="#219F38" />
+          <stop offset="0.12" stopColor="#A2CC39" />
+          <stop offset="0.28" stopColor="#86C239" />
+          <stop offset="0.87" stopColor="#219F38" />
         </linearGradient>
         <linearGradient
           id="paint3_linear_179_623"
@@ -89,8 +89,8 @@ export const SberBankIcon = () => {
           y2="14.6929"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0.06" stop-color="#0290EA" />
-          <stop offset="0.79" stop-color="#0C89CA" />
+          <stop offset="0.06" stopColor="#0290EA" />
+          <stop offset="0.79" stopColor="#0C89CA" />
         </linearGradient>
         <linearGradient
           id="paint4_linear_179_623"
@@ -100,11 +100,11 @@ export const SberBankIcon = () => {
           y2="37.211"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0.13" stop-color="#F1E813" />
-          <stop offset="0.3" stop-color="#EAE616" />
-          <stop offset="0.53" stop-color="#D8DF1F" />
-          <stop offset="0.8" stop-color="#BAD52D" />
-          <stop offset="0.98" stop-color="#A2CC39" />
+          <stop offset="0.13" stopColor="#F1E813" />
+          <stop offset="0.3" stopColor="#EAE616" />
+          <stop offset="0.53" stopColor="#D8DF1F" />
+          <stop offset="0.8" stopColor="#BAD52D" />
+          <stop offset="0.98" stopColor="#A2CC39" />
         </linearGradient>
         <linearGradient
           id="paint5_linear_179_623"
@@ -114,9 +114,9 @@ export const SberBankIcon = () => {
           y2="15.3771"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0.07" stop-color="#A2CC39" />
-          <stop offset="0.26" stop-color="#81C45E" />
-          <stop offset="0.92" stop-color="#0FA7DF" />
+          <stop offset="0.07" stopColor="#A2CC39" />
+          <stop offset="0.26" stopColor="#81C45E" />
+          <stop offset="0.92" stopColor="#0FA7DF" />
         </linearGradient>
       </defs>
     </svg>

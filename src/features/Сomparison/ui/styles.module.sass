@@ -1,2 +1,17 @@
+@import 'shared/styles/config'
+    
 .comparison
-    position: relative
+    position: fixed
+    top: 150px
+    right: 20px
+    z-index: 100
+    @media(max-width: $tab-sm)
+        display: none
+    .quantity
+        position: absolute
+        background: var(--purple-color)
+        padding: 5px
+        border-radius: var(--rounded-full)
+        color: var(--white-color)
+        left: -5px
+        top: -5px

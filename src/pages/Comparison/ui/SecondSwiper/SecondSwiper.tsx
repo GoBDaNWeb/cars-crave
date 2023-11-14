@@ -54,6 +54,17 @@ export const SecondSwiper: FC<any> = ({ mainSwiper, setSecondSwiper }) => {
           //@ts-ignore
           nextEl: navNext,
         }}
+        breakpoints={{
+          0: {
+            slidesPerView: 1.2,
+          },
+          767: {
+            slidesPerView: 2.1,
+          },
+          1024: {
+            slidesPerView: 3.1,
+          },
+        }}
       >
         {carList.map((car) => (
           <SwiperSlide key={car.id} className={s.swiperItem}>

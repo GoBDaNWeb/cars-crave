@@ -10,13 +10,13 @@ export const CloseBtnIcon = () => {
       <path
         d="M21 1L1 21"
         stroke="white"
-        stroke-linecap="round"
+        strokeLinecap="round"
         stroke-linejoin="round"
       />
       <path
         d="M1.00098 1L21.001 21"
         stroke="white"
-        stroke-linecap="round"
+        strokeLinecap="round"
         stroke-linejoin="round"
       />
     </svg>

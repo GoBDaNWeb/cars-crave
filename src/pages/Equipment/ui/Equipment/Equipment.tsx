@@ -5,10 +5,12 @@ import { About } from "../About/About";
 import { Programs } from "../Programs/Programs";
 import { CreditForm } from "features/CreditForm";
 import { CarSwiper } from "widgets/CarSwiper";
+import { Comparison } from "features/Сomparison";
 
 export const Equipment = () => {
   return (
     <div className={s.equipment}>
+      <Comparison />
       <div className={`${s.breadcrumbWrapper} container`}>
         <Breadcrumbs breadcrumbs={breadcrumbs} />
       </div>

@@ -1,3 +1,5 @@
+@import 'shared/styles/config'
+  
 html 
   box-sizing: border-box
   scrollbar-width: thin
@@ -20,5 +22,7 @@ body
   margin: 0 10px
 .container 
   padding: 0 50px
+  @media(max-width: $tab)
+    padding: 0 20px
 .noScroll
   overflow: hidden

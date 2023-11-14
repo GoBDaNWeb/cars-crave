@@ -57,7 +57,7 @@ export const BrandItem = () => {
                   Zeekr 001
                 </Title>
                 <Button className={s.viewBtn}>
-                  Смотреть модель
+                  <span>Смотреть модель</span>
                   <ArrowRight />
                 </Button>
               </div>

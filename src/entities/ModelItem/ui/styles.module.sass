@@ -1,3 +1,5 @@
+@import 'shared/styles/config'
+    
 .model 
     padding: 35px 30px
     border: 1px solid var(--gray-color)
@@ -6,6 +8,7 @@
     flex-direction: column
     gap: 30px
     transition: var(--trs-500)
+    min-width: 263px
     &:hover
         border-color: var(--purple-hover-color) 
         .modelContent
@@ -32,7 +35,8 @@
             font-weight: 700
             line-height: 130% 
             transition: var(--trs-500)
-           
+            @media(max-width: $tab)
+                font-size: 14px
         p
             color: var(--dark-color)
             font-family: Actay Wide, sans-serif
@@ -41,3 +45,5 @@
             font-weight: 700
             line-height: 130%
             transition: var(--trs-500)
+            @media(max-width: $tab)
+                font-size: 18px

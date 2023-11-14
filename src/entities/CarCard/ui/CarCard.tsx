@@ -18,6 +18,7 @@ interface ICarCardProps {
   fullOptions?: Options[];
   isFull?: boolean;
   hideBtns?: boolean;
+  isRow?: boolean;
 }
 
 export const CarCard: FC<ICarCardProps> = ({
@@ -29,17 +30,19 @@ export const CarCard: FC<ICarCardProps> = ({
   fullOptions,
   isFull = true,
   hideBtns = false,
+  isRow = false,
 }) => {
   const { push } = useRouter();
 
   return (
-    <div className={s.carCard}>
+    <div className={`${s.carCard} ${isRow ? s.row : ""}`}>
       <div className={s.imageWrapper}>
         <Image src={img} fill alt="car" />
         <div className={s.info}>
           <Image src={brand} width={40} height={40} alt="brand" />
           <div className={s.compare}>
-            <span>Кредит от 0.01%</span>
+            {fullOptions ? null : <span>Кредит от 0.01%</span>}
+
             <CompareIcon />
           </div>
         </div>

@@ -25,6 +25,16 @@ export const AboutSwiper = () => {
           //@ts-ignore
           nextEl: navNext,
         }}
+        breakpoints={{
+          0: {
+            spaceBetween: 30,
+            slidesPerView: 1.2,
+          },
+          1024: {
+            spaceBetween: 70,
+            slidesPerView: 1.1,
+          },
+        }}
       >
         <SwiperSlide className={s.aboutItem}>
           <Tour />
@@ -51,14 +61,8 @@ export const AboutSwiper = () => {
           <div className={s.imageWrapper}>
             <Image src="/crave-bg.png" fill alt="about" />
           </div>
-          <div className={s.imageWrapper}>
-            <Image src="/crave-bg.png" fill alt="about" />
-          </div>
         </SwiperSlide>
         <SwiperSlide className={s.aboutItem}>
-          <div className={s.imageWrapper}>
-            <Image src="/crave-bg.png" fill alt="about" />
-          </div>
           <div className={s.imageWrapper}>
             <Image src="/crave-bg.png" fill alt="about" />
           </div>

@@ -60,8 +60,8 @@ export const AtlassianIcon = () => {
           y2="41.8367"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#0052CC" />
-          <stop offset="0.923" stop-color="#2684FF" />
+          <stop stopColor="#0052CC" />
+          <stop offset="0.923" stopColor="#2684FF" />
         </linearGradient>
       </defs>
     </svg>

@@ -46,6 +46,32 @@ export const Programs = () => {
           <Fragment key={index}>{elem.elem}</Fragment>
         ))}
       </div>
+      <div className={s.programsListMob}>
+        <div className={s.innerList}>
+          {programs.slice(0, programs.length / 2).map((elem, index) => (
+            <Fragment key={index}>{elem.elem}</Fragment>
+          ))}
+          {programs
+            .slice(0, programs.length / 2)
+            .reverse()
+            .map((elem, index) => (
+              <Fragment key={index}>{elem.elem}</Fragment>
+            ))}
+        </div>
+        <div className={s.innerList}>
+          {programs
+            .slice(programs.length / 2, programs.length)
+            .reverse()
+            .map((elem, index) => (
+              <Fragment key={index}>{elem.elem}</Fragment>
+            ))}
+          {programs
+            .slice(programs.length / 2, programs.length)
+            .map((elem, index) => (
+              <Fragment key={index}>{elem.elem}</Fragment>
+            ))}
+        </div>
+      </div>
       <div className={s.formWrapper}>
         <CreditForm />
       </div>

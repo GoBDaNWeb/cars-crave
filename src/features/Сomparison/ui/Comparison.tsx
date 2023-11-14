@@ -7,8 +7,8 @@ import { Button, CompareIcon } from "shared/ui";
 export const Comparison = () => {
   const { push } = useRouter();
   return (
-    <Button className={s.comparison} onClick={() => push("/")}>
-      <span className={s.quantity}></span>
+    <Button className={s.comparison} onClick={() => push("/comparison")}>
+      <span className={s.quantity}>10</span>
       <CompareIcon />
     </Button>
   );

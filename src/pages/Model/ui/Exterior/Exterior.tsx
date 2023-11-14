@@ -39,6 +39,7 @@ export const Exterior = () => {
             grabCursor={false}
           >
             <SwiperSlide>
+              <span>мокрый асфальт</span>
               <div className={s.imageWrapper}>
                 <Image
                   src="/exterior/exterior-swiper.jpg"
@@ -49,6 +50,7 @@ export const Exterior = () => {
               </div>
             </SwiperSlide>
             <SwiperSlide>
+              <span>мокрый асфальт</span>
               <div className={s.imageWrapper}>
                 <Image
                   src="/exterior/exterior-swiper.jpg"
@@ -59,6 +61,7 @@ export const Exterior = () => {
               </div>
             </SwiperSlide>
             <SwiperSlide>
+              <span>мокрый асфальт</span>
               <div className={s.imageWrapper}>
                 <Image
                   src="/exterior/exterior-swiper.jpg"
@@ -69,6 +72,7 @@ export const Exterior = () => {
               </div>
             </SwiperSlide>
             <SwiperSlide>
+              <span>мокрый асфальт</span>
               <div className={s.imageWrapper}>
                 <Image
                   src="/exterior/exterior-swiper.jpg"
@@ -79,22 +83,25 @@ export const Exterior = () => {
               </div>
             </SwiperSlide>
           </Swiper>
-          <Swiper
-            //@ts-ignore
-            onSwiper={setThumbsSwiper}
-            spaceBetween={10}
-            slidesPerView="auto"
-            modules={[Thumbs]}
-            className={s.thumbs}
-          >
-            {thumbs.map((thumb, index) => (
-              <SwiperSlide
-                key={index}
-                style={{ background: thumb }}
-                className={s.thumb}
-              ></SwiperSlide>
-            ))}
-          </Swiper>
+          <div className={s.thumSwiperWrapper}>
+            <span>Выберите цвет кузова:</span>
+            <Swiper
+              //@ts-ignore
+              onSwiper={setThumbsSwiper}
+              spaceBetween={10}
+              slidesPerView="auto"
+              modules={[Thumbs]}
+              className={s.thumbs}
+            >
+              {thumbs.map((thumb, index) => (
+                <SwiperSlide
+                  key={index}
+                  style={{ background: thumb }}
+                  className={s.thumb}
+                ></SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
         </div>
       </div>
       <ExteriorSwiper />

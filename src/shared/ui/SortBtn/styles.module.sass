@@ -1,3 +1,5 @@
+@import 'shared/styles/config'
+    
 .sort
     border-radius: var(--rounded-xl)
     background: var(--gray-bg-color)
@@ -6,6 +8,8 @@
     display: flex
     align-items: center
     gap: 10px
+    @media(max-width: $tab-sm)
+        padding: 10px 15px
     span
         display: flex
         align-items: center

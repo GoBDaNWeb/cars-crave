@@ -1,6 +1,12 @@
+@import 'shared/styles/config'
+    
 .aboutSwiper
     height: 70vh
     position: relative
+    @media(max-width: $tab)
+        height: 60vh
+    @media(max-width: $tab-sm)
+        height: 30vh
     .info
         position: absolute
         z-index: 2
@@ -27,6 +33,8 @@
                 display: flex
                 align-items: center
                 justify-content: center
+                @media(max-width: $tab)
+                    display: none
             .credit
                 background: var(--white-color)
                 border-radius: var(--rounded-xl)
@@ -52,6 +60,10 @@
         bottom: 10px
         display: flex
         justify-content: flex-start
+        @media(max-width: $tab)
+            bottom: -80px
+            left: 0
+            right: 0
         .thumb
             cursor: pointer
             width: 116px !important

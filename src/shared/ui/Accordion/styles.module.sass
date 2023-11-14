@@ -1,3 +1,5 @@
+@import 'shared/styles/config'
+    
 .accordion.active
     .icon
         transform: rotate(0deg)
@@ -14,6 +16,9 @@
         font-weight: 700
         line-height: 100%
         text-transform: uppercase
+        text-align: left
+        @media(max-width: $tab)
+            font-size: 20px
     .icon
         transform: rotate(180deg)
         transition: var(--trs-800)
@@ -22,7 +27,6 @@
         align-items: center
 
 .content 
-    padding: 0 18px
     max-height: 0
     overflow: hidden
     transition:  var(--trs-800)

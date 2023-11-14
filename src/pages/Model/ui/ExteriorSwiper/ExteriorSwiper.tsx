@@ -12,7 +12,7 @@ export const ExteriorSwiper = () => {
   const [navNext, navNextRef] = useSwiperRef();
 
   return (
-    <div className={`${s.exterior} container`}>
+    <div className={s.exterior}>
       <Swiper
         slidesPerView={1.15}
         modules={[Navigation]}
@@ -23,6 +23,14 @@ export const ExteriorSwiper = () => {
           prevEl: navPrev,
           //@ts-ignore
           nextEl: navNext,
+        }}
+        breakpoints={{
+          0: {
+            spaceBetween: 30,
+          },
+          1024: {
+            spaceBetween: 72,
+          },
         }}
       >
         {[...Array(10)].map((_, index) => (

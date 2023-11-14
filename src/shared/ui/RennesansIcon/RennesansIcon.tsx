@@ -24,8 +24,8 @@ export const RennesansIcon = () => {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(21.31 34.14) scale(23.35)"
         >
-          <stop stop-color="#D6005E" />
-          <stop offset="1" stop-color="#E3448A" />
+          <stop stopColor="#D6005E" />
+          <stop offset="1" stopColor="#E3448A" />
         </radialGradient>
       </defs>
     </svg>

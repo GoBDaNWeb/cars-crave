@@ -10,6 +10,9 @@ export const Partners = () => {
         <Breadcrumbs breadcrumbs={breadcrumbs} />
       </div>
       <Title variant="h3">патнёры</Title>
+      <span className={s.mobTitle}>
+        Среди наших партнёров ведущие российские банки.
+      </span>
       <PartnersList />
     </div>
   );

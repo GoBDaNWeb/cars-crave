@@ -24,6 +24,14 @@ export const AboutSwiper = () => {
           //@ts-ignore
           nextEl: navNext,
         }}
+        breakpoints={{
+          0: {
+            spaceBetween: 30,
+          },
+          1024: {
+            spaceBetween: 72,
+          },
+        }}
       >
         {[...Array(10)].map((_, index) => (
           <SwiperSlide key={index} className={s.aboutItem}>
