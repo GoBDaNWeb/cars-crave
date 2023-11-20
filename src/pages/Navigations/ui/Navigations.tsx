@@ -12,6 +12,8 @@ export const Navigations = () => {
       <Link href={"/model/Hongqi-E-HS9"}>Модель</Link>
       <Link href={"/equipment/Hongqi-E-HS9"}>Комплектация</Link>
       <Link href={"/comparison"}>Сравнение</Link>
+      <Link href={"/404"}>404</Link>
+      <Link href={"/search"}>Поиск</Link>
     </div>
   );
 };
